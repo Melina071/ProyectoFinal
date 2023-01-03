@@ -1,0 +1,33 @@
+{% extends "AppArte/padre.html" %}
+
+
+{% block titulo %}
+
+{% endblock %}
+
+
+
+{% block descripcion %}                            
+
+
+Busque un disco:
+
+{% endblock %}
+
+
+{% block urldelboton%}
+
+<form action="/resultadosDiscos" method="GET"> 
+    <p><h5>Por nombre del álbum:</h5></p>
+    <input type="text", name="nombre" name= "artista" id="nombre" id="artista">
+    
+    <p><br><h5>Por nombre de la banda o artista:</h5></p>
+    <input type="text", name="artista" id="artista">
+    <p><br></p>
+    <input type="submit" value="Buscar">
+
+{% endblock %}
+
+{% block boton %}
+
+{% endblock %}

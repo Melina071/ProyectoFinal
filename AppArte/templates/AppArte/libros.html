@@ -1,0 +1,25 @@
+{% extends "AppArte/padre.html" %}
+
+
+{% block titulo %}
+Libros
+{% endblock %}
+
+
+
+{% block urldelboton%}
+
+<a class="btn btn-primary" href="{% url 'listalibros' %}">¡Mira los libros recomendados!</a>
+
+<p> <br> </p>
+
+{% if user.is_authenticated %}
+<a class="btn btn-primary" href="{% url 'formdelibro' %}">¡Dínos sobre un libro que te haya gustado!</a>
+
+{% else %}
+
+<a class="btn btn-primary" href="{% url 'register' %}">¡Dínos sobre un libro que te haya gustado!</a>
+
+{% endif %}
+
+{% endblock urldelboton%}

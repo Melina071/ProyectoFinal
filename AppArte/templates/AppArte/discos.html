@@ -1,0 +1,22 @@
+{% extends "AppArte/padre.html" %}
+
+
+{% block titulo %}
+Discos
+{% endblock %}
+
+
+
+{% block urldelboton%}
+
+<a class="btn btn-primary" href="{% url 'listadiscos' %}">¡Mira los discos recomendados!</a>
+
+<p> <br> </p>
+{% if user.is_authenticated %}
+<a class="btn btn-primary" href="{% url 'formdedisco' %}">¡Dínos sobre un disco que te haya gustado!</a>
+{% else %}
+<a class="btn btn-primary" href="{% url 'register' %}">¡Dínos sobre un disco que te haya gustado!</a>
+{% endif %}
+
+
+{% endblock urldelboton%}

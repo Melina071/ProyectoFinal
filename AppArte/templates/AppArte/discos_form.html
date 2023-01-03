@@ -1,0 +1,30 @@
+{% extends "AppArte/padre.html" %}
+
+
+    {% block titulo %}
+<h5 style="color: white;"> Edite los datos del disco:<br><br> <h5>
+
+    {% if formulario.errors %}
+
+    <p style="color: white;"> Error. Reingrese los datos</p>
+
+    {% endif %}
+
+    <form action="" enctype= "multipart/form-data" method="POST" > {% csrf_token %}
+
+        <table>
+
+        {{ form.as_p }}
+        
+        </table>
+
+        <input type="submit", value="Enviar"> 
+    </form>   
+
+        {% endblock %}
+
+{% block descripcion %}
+{% endblock %}
+
+{% block urldelboton %}
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends "AppArte/padre.html" %}
+
+    {% block titulo %}
+
+
+
+        {% endblock %}
+
+{% block descripcion %}
+
+<form action="" method="POST"> {% csrf_token %}
+
+        <p> ¿Desea borrar este libro?</p>
+
+        <input type="submit", value="Confirmar">  
+{% endblock %}
+
+{% block urldelboton %}
+{% endblock %}

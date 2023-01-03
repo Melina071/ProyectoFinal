@@ -1,0 +1,36 @@
+{% extends "AppArte/padre.html" %}
+
+{% block titulo %}
+
+{% endblock %}
+
+{% block descripcion %}                            
+
+<p> Todas las recomendaciones de libros: </p>
+    <br>
+    <ul>  
+
+{% for libros in object_list %}
+
+    <li>{{libros.nombre}} | {{libros.autor}} | {{libros.puntaje}}</li>
+
+<a href="{% url 'detallelibros' libros.id %}">Ver libro</a> 
+    {% if user.is_authenticated and user.id == libros.usuarioBlog.id %}
+                    <a href="{% url 'actualizarlibros' libros.id %}">Editar libro </a> 
+                    </p><a href="{% url 'borrarlibros' libros.id %}">Borrar libro </a>
+    {% endif %}
+
+
+    </ul>    
+    
+{% endfor %}       
+
+{% endblock %}
+{% block urldelboton%}
+
+{% if user.is_authenticated %}
+<a href="{% url 'formdelibro' %}"> <h5>¿Quieres recomendar un libro?</h5> </a>
+{% else %}
+<a href="{% url 'register' %}"> <h5>¿Quieres recomendar un libro?</h5> </a>
+{% endif %}
+{% endblock urldelboton%}

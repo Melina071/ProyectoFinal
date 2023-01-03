@@ -1,0 +1,31 @@
+{% extends "AppArte/padre.html" %}
+
+{% block titulo %}
+
+{% endblock %}
+
+{% block descripcion %}                            
+<style>
+    #p1 {
+        border: 2px solid;
+    }
+    
+</style>
+<p id="p1" style="color: white;"> {{libros.usuarioBlog}} opino sobre este libro: </p>
+    <br>
+
+    
+    <p style="color: rgb(231, 233, 233);">{{libros.nombre}} | {{libros.artista}} | {{libros.puntaje}}</p>
+    {% if libros.portada %}
+    <img src="{{libros.portada.url}}" alt="No hay imágen" style="max-width: 200px ; max-height: 200px;"> 
+    {% endif %}
+    <p> <br>{{libros.descripcion}} </p>
+    <a href="{% url 'listalibros' %}"> Volver </a>
+
+
+
+{% endblock %}
+
+{% block urldelboton%}
+
+{% endblock urldelboton%}

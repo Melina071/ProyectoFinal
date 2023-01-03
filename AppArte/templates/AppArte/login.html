@@ -1,0 +1,23 @@
+{% extends 'AppArte/padre.html' %}
+
+
+
+{% block titulo %}
+
+{% endblock %}
+
+{% block descripcion %}
+
+<form action="" method="POST"> {% csrf_token %}
+
+{{formulario.as_p}}
+
+<a href="{% url 'Inicio' %}"><input type="submit">
+</a>
+</form>
+
+{% endblock %}
+
+{% block urldelboton%}
+{% endblock urldelboton%}
+

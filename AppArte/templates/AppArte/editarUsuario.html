@@ -1,0 +1,32 @@
+{% extends "AppArte/padre.html" %}
+
+{% block titulo %}
+
+{% endblock %}
+
+
+
+{% block descripcion %}                            
+
+Edite su perfil:
+
+<form action="" method="POST"> {% csrf_token %}
+
+    {{formulario.as_p}}
+
+<button type="submit">Editar</button>
+<p> <br> </p>
+</form>
+<a href="{% url 'avatar'%} "><button class="GFG">Agregue una foto de perfil</button></a>
+
+{% endblock %}
+
+
+{% block urldelboton%}
+
+
+{% endblock %}
+
+{% block boton %}
+
+{% endblock %}

@@ -1,0 +1,34 @@
+{% extends "AppArte/padre.html" %}
+
+{% block titulo %}
+
+{% endblock %}
+
+{% block descripcion %}                            
+<style>
+    #p1 {
+        border: 2px solid;
+    }
+    
+</style>
+<p id="p1" style="color: white;"> {{discos.usuarioBlog}} opino sobre este disco: </p>
+    <br>  
+
+
+
+
+    
+    <p style="color: rgb(231, 233, 233);">{{discos.nombre}} | {{discos.artista}} | {{discos.puntaje}}</p>
+    {% if discos.tapa %} 
+    <img src="{{ discos.tapa.url }}" alt="No hay imágen" style="max-width: 200px ; max-height: 200px;"> 
+    {% endif %}
+    <p> <br>{{discos.descripcion}} </p>
+    <a href="{% url 'listadiscos' %}"> Volver </a>
+
+
+
+{% endblock %}
+
+{% block urldelboton%}
+
+{% endblock urldelboton%}

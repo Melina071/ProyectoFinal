@@ -1,0 +1,31 @@
+{% extends "AppArte/padre.html" %}
+
+{% block titulo %}
+
+<h5 style="color: white;"> Escriba sobre un disco que haya oído:<br><br> <h5>
+
+    {% if formulario.errors %}
+
+    <p style="color: white;"> Error. Reingrese los datos</p>
+
+    {% endif %}
+
+    <form action="" method="POST" enctype= "multipart/form-data"> {% csrf_token %}
+
+        <table>
+
+        {{ formulario2.as_p }}
+        
+        </table>
+
+        <input type="submit", value="Enviar">    
+
+    </form>
+{% endblock %}
+
+{% block descripcion %}
+{% endblock %}
+
+{% block urldelboton %}
+{% endblock %}
+

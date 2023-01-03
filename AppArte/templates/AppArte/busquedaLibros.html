@@ -1,0 +1,34 @@
+{% extends "AppArte/padre.html" %}
+
+
+{% block titulo %}
+
+{% endblock %}
+
+
+
+{% block descripcion %}                            
+
+
+Busque un libro:
+
+{% endblock %}
+
+
+{% block urldelboton%}
+
+<form action="/resultadosLibros" method="GET"> 
+    <p><h5>Por nombre del libro:</h5></p>
+    <input type="text", name="nombre" id="nombre">
+    
+    <p><br><h5>Por nombre de la autora:</h5></p>
+    <input type="text", name="autor" id="autor">
+    <p><br></p>
+    <input type="submit" value="Buscar">
+
+
+{% endblock %}
+
+{% block boton %}
+
+{% endblock %}

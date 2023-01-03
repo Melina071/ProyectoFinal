@@ -1,0 +1,20 @@
+{% extends 'AppArte/padre.html' %}
+
+{% block titulo %}
+{% endblock %}    
+
+
+{% block descripcion %}
+
+<p><br>Agrega tu avatar:<br></p>
+<form action="" method="POST" enctype= "multipart/form-data"> {% csrf_token %}
+
+{{formulario.as_p}}
+
+<button type="submit"> Guardar 
+</a>
+</form>
+{% endblock %}
+
+{% block urldelboton%}
+{% endblock urldelboton%}

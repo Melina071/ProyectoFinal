@@ -1,0 +1,35 @@
+{% extends "AppArte/padre.html" %}
+
+
+{% block titulo %}
+
+{% endblock %}
+
+
+
+{% block descripcion %}                            
+
+
+Busque una pintura:
+
+{% endblock %}
+
+
+{% block urldelboton%}
+
+<form action="/resultadosPinturas" method="GET"> 
+    <p><h5>Por nombre de la obra:</h5></p>
+    <input type="text", name="nombre" id="nombre">
+    
+    <p><br><h5>Por nombre del artista:</h5></p>
+    <input type="text", name="artista" id="artista">
+    <p><br></p>
+    <input type="submit" value="Buscar">
+
+
+
+{% endblock %}
+
+{% block boton %}
+
+{% endblock %}
