@@ -1,9 +1,12 @@
 # Proyecto Final -- Sanchez Melina
 
-La página creada funciona como un blog relacionado a discos, libros y pinturas. Se pueden ver las recomendaciones hechas por distintos usuarios con la respectiva 
-información sobre la obra, y registrarse para crear las propias. Estos posts pueden buscarse (ya sea por el nombre del artista o de la obra) pero se debe estar registrado para hacer una recomendación, la cual solo el usuario podra editar o borrar. Los posts también pueden incluir una imagen subida por el usuario.
+La página creada funciona como un blog relacionado a discos, libros y pinturas. 
+Se pueden ver las recomendaciones hechas por distintos usuarios con la respectiva 
+información sobre la obra, y registrarse para crear las propias. 
+Estos posts pueden buscarse (ya sea por el nombre del artista o de la obra) pero se debe estar registrado para hacer una recomendación, la cual solo el usuario podra editar o borrar. 
+Los posts también pueden incluir una imagen subida por el usuario.
 
-En la página de Inicio tendras la opcioó de:
+En la página de Inicio tendras la opción de:
 
 - Buscar discos posteados
 - Buscar libros posteados
