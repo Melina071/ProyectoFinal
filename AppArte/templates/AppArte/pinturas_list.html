@@ -1,0 +1,37 @@
+{% extends "AppArte/padre.html" %}
+
+{% block titulo %}
+
+{% endblock %}
+
+{% block descripcion %}                            
+
+<p> Todas las recomendaciones de pinturas: </p>
+    <br>
+    <ul>  
+
+{% for pinturas in object_list %}
+
+    <li>{{pinturas.nombre}} | {{pinturas.artista}} | {{pinturas.año}}</li>
+
+    <a href="{% url 'detallepinturas' pinturas.id %}"> Ver pintura </a>
+    {% if user.is_authenticated and user.id == pinturas.usuarioBlog.id %}
+
+    <a href="{% url 'actualizarpinturas' pinturas.id %}"> Editar pintura </a>
+    <a href="{% url 'borrarpinturas' pinturas.id %}"> Borrar pintura </a>
+    {% endif %}
+
+    </ul>    
+    
+{% endfor %}       
+
+{% endblock %}
+
+{% block urldelboton%}
+{% if user.is_authenticated %}
+<a href="{% url 'formdepinturas' %}"> <h5>¿Quieres recomendar una pintura?</h5> </a>
+{% else %}
+<a href="{% url 'register' %}"> <h5>¿Quieres recomendar una pintura?</h5> </a>
+
+{% endif %}
+{% endblock urldelboton%}

@@ -1,0 +1,23 @@
+{% extends "AppArte/padre.html" %}
+
+
+{% block descripcion %}                            
+
+<p> Todas las recomendaciones de discos: </p>
+    <br>
+    <ul>  
+
+    {% for x in discos %}
+
+    <li>"{{x.nombre}}" --- {{x.artista}}          >Puntaje: {{x.puntaje}}</li>
+
+    <p><br><h6>{{x.descripcion}}</h6><br></p>
+    
+    </ul>    
+    {% endfor %}       
+
+{% endblock %}
+
+{% block urldelboton%}
+
+{% endblock urldelboton%}

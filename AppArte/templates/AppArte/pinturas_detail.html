@@ -1,0 +1,33 @@
+{% extends "AppArte/padre.html" %}
+
+{% block titulo %}
+{% endblock %}
+
+{% block descripcion %}                            
+<style>
+    #p1 {
+        border: 2px solid;
+    }
+    
+</style>
+<p id="p1" style="color: rgb(255, 255, 255);"> {{pinturas.usuarioBlog}} opino sobre esta obra: </p>
+
+    <br>
+
+
+    
+    <p style="color: rgb(231, 233, 233);">{{pinturas.nombre}} | {{pinturas.artista}} | {{pinturas.año}}</p>
+
+    {% if pinturas.foto %}
+    <img src="{{pinturas.foto.url}}" alt="No hay imágen" style="max-width: 200px ; max-height: 200px;"> 
+    {% endif %}
+    <p id="p2"> <br>{{pinturas.descripcion}} </p>
+
+    <a href="{% url 'listapinturas' %}"> Volver </a>
+
+
+{% endblock %}
+
+{% block urldelboton%}
+
+{% endblock urldelboton%}

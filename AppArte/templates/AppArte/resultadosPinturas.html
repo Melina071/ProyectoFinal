@@ -1,0 +1,44 @@
+{% extends "AppArte/padre.html" %}
+{% block titulo %}
+
+{% endblock %}
+
+{% block descripcion %}                            
+
+    <br>
+    <ul>  
+
+    {% for x in pinturaResultados %}
+
+    <li style="color: white;">"{{x.nombre}}" de {{x.artista}} | {{x.año}}</li>
+    {% if x.foto %} 
+    <br>
+    <img src="{{ x.foto.url }}" alt="No hay imágen" style="max-width: 200px ; max-height: 200px;"> 
+    {% endif %}        
+    <ul><br></ul>
+    <p style="color: white;"> Posteado por {{x.usuarioBlog}}:</p>
+
+    <p><h5>{{x.descripcion}}</h5><br></p>
+    
+    </ul>    
+    {% endfor %}        
+
+    {% for x in pinturaResultados2 %}
+
+    <li style="color: white;">"{{x.nombre}}" de {{x.artista}} | {{x.año}}</li>
+    {% if x.foto %} 
+    <br>
+    <img src="{{ x.foto.url }}" alt="No hay imágen" style="max-width: 200px ; max-height: 200px;"> 
+    {% endif %}        
+    <ul><br></ul>
+    <p style="color: white;"> Posteado por {{x.usuarioBlog}}:</p>
+
+    <p><h5>{{x.descripcion}}</h5><br></p>
+    </ul>    
+    {% endfor %}       
+
+{% endblock %}
+
+{% block urldelboton%}
+
+{% endblock urldelboton%}

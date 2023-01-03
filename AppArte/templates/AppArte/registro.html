@@ -1,0 +1,21 @@
+{% extends 'AppArte/padre.html' %}
+
+{% block titulo %}
+
+{% endblock %}
+
+{% block descripcion %}
+
+<p style="color: white;"> ¡Regístrate para recomendar libros, discos y pinturas! </p>
+
+<form action="" method="POST"> {% csrf_token %}
+
+{{formulario.as_p}}
+
+<button type="submit"> Regístrate. </button>
+
+{% endblock %}
+
+{% block urldelboton%}
+{% endblock urldelboton%}
+
